@@ -24,14 +24,16 @@ const images = [
     alt: "Lighthouse Coast Sea",
   },
 ];
-const categories = document.querySelectorAll("#categories .item");
+const gallery = document.querySelector(".gallery");
 
-console.log(`Number of categories: ${categories.length}`);
+const markup = images
+  .map(
+    ({ url, alt }) => `
+    <li class="gallery-item">
+      <img src="${url}" alt="${alt}">
+    </li>
+  `
+  )
+  .join("");
 
-categories.forEach((item) => {
-  const title = item.querySelector("h2").textContent;
-  const elementsCount = item.querySelectorAll("li").length;
-
-  console.log(`Category: ${title}`);
-  console.log(`Elements: ${elementsCount}`);
-});
+gallery.insertAdjacentHTML("beforeend", markup);

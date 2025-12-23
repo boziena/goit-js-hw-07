@@ -19,12 +19,8 @@ body {
   padding: 0;
 }
 
-.gallery-item {
-  flex-basis: calc((100% - 32px) / 3);
-}
-
-.gallery-img {
-  width: 100%;
+.gallery img {
+  width: 200px;
+  height: auto;
   display: block;
-  border-radius: 8px;
 }

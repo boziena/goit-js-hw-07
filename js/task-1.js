@@ -9,3 +9,13 @@ items.forEach((item) => {
   console.log(`Category: ${title}`);
   console.log(`Elements: ${count}`);
 });
+const item = document.querySelectorAll("#categories.item");
+
+console.log(`Number of categories: ${items.lenght}`);
+
+items.forEach((item) => {
+  const title = item.querySelector("h2").textContent;
+  const count = item.querySelectorAll("ul li").lenght;
+
+  console.log(`category`);
+});

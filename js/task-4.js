@@ -1,20 +1,19 @@
-uerySelector(".login-form");
+const form = document.querySelector("form.login-form");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const { email, password } = form.elements;
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
+  const email = form.elements.email.value.trim();
+  const password = form.elements.password.value.trim();
 
-  if (!emailValue || !passwordValue) {
+  if (email === "" || password === "") {
     alert("All form fields must be filled in");
     return;
   }
 
   const data = {
-    email: emailValue,
-    password: passwordValue,
+    email,
+    password,
   };
 
   console.log(data);
